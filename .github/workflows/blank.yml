@@ -34,7 +34,7 @@ jobs:
     
     - name: Access cloned repo
       run: |
-         cd grafanagke
+         cd prometheus
          ls -la
 
 
