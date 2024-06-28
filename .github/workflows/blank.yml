@@ -50,8 +50,8 @@ jobs:
       run: |
         gcloud components update
         gcloud container clusters get-credentials directed-graph-426923-n9-gke --region us-east5 --project directed-graph-426923-n9
-        #helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-        #helm template sonarqube sonarqube/sonarqube > ./sonarqube.yaml  -n sonarqube
+        helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  
         ls
-        helm install my-prometheus prometheus/prometheus -f values.yaml -f dev-values.yaml -n prometheus
+        helm install my-prometheus prometheus-community/prometheus -f values.yaml -f dev-values.yaml -n prometheus
         #kubectl delete -f sonarqube.yaml -n sonarqube
