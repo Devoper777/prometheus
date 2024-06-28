@@ -53,5 +53,6 @@ jobs:
         helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
   
         ls
+        kubectl create ns prometheus
         helm install my-prometheus prometheus-community/prometheus -f values.yaml -f dev-values.yaml -n prometheus
         #kubectl delete -f sonarqube.yaml -n sonarqube
